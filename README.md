@@ -127,12 +127,6 @@ This repository contains the source code for a QA bot designed to analyze Profit
 
 ---
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
----
 
-## Contact
-For any queries or support, please contact:
-- **Email:** support@example.com
-- **GitHub Issues:** [Open an issue](https://github.com/your-repo/issues)
+
