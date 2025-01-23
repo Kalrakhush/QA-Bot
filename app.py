@@ -88,6 +88,19 @@ if st.session_state['index']:
         response = query_engine.chat(user_query)
         if response:
             logger.info("Query processed successfully.")
+            
+            # Display response
             st.write(f"Response: {response}")
+            
+            # Display retrieved context
+            st.write("Retrieved Context:")
+            context_data = []
+            for node in response.source_nodes:
+                context_data.append({
+                    "Context Text": node.text,
+                    "Metadata": node.metadata
+                })
+                st.write(f"- **Context**: {context_data}")
         else:
             logger.warning("No response returned for the query.")
+

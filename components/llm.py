@@ -4,8 +4,10 @@ from config.config import Config
 from llama_index.core import Settings
 import os
 import streamlit as st
-os.environ["HF_token"] = st.secrets["HF_TOKEN"]
-google_api_key = st.secrets["GOOGLE_API_KEY"]
+# os.environ["HF_token"] = st.secrets["HF_TOKEN"]
+# google_api_key = st.secrets["GOOGLE_API_KEY"]
+# os.environ["HF_token"] = os.getenv["HF_TOKEN"]
+google_api_key = os.getenv("GOOGLE_API_KEY")
 def initialize_embeddings():
     embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
     return embed_model
